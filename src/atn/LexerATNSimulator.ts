@@ -5,31 +5,31 @@
 
 // ConvertTo-TS run at 2016-10-04T11:26:29.1083066-07:00
 
-import { AcceptStateInfo } from "../dfa/AcceptStateInfo";
-import { ActionTransition } from "./ActionTransition";
-import { ATN } from "./ATN";
-import { ATNConfig } from "./ATNConfig";
-import { ATNConfigSet } from "./ATNConfigSet";
-import { ATNSimulator } from "./ATNSimulator";
-import { ATNState } from "./ATNState";
-import { CharStream } from "../CharStream";
-import { DFA } from "../dfa/DFA";
-import { DFAState } from "../dfa/DFAState";
-import { Interval } from "../misc/Interval";
-import { IntStream } from "../IntStream";
-import { Lexer } from "../Lexer";
-import { LexerActionExecutor } from "./LexerActionExecutor";
-import { LexerNoViableAltException } from "../LexerNoViableAltException";
-import { NotNull, Override } from "../Decorators";
-import { OrderedATNConfigSet } from "./OrderedATNConfigSet";
-import { PredictionContext } from "./PredictionContext";
-import { PredicateTransition } from "./PredicateTransition";
-import { RuleStopState } from "./RuleStopState";
-import { RuleTransition } from "./RuleTransition";
-import { Token } from "../Token";
-import { Transition } from "./Transition";
-import { TransitionType } from "./TransitionType";
-import * as assert from "assert";
+import { AcceptStateInfo } from "../dfa/AcceptStateInfo.ts";
+import { ActionTransition } from "./ActionTransition.ts";
+import { ATN } from "./ATN.ts";
+import { ATNConfig } from "./ATNConfig.ts";
+import { ATNConfigSet } from "./ATNConfigSet.ts";
+import { ATNSimulator } from "./ATNSimulator.ts";
+import { ATNState } from "./ATNState.ts";
+import { CharStream } from "../CharStream.ts";
+import { DFA } from "../dfa/DFA.ts";
+import { DFAState } from "../dfa/DFAState.ts";
+import { Interval } from "../misc/Interval.ts";
+import { IntStream } from "../IntStream.ts";
+import { Lexer } from "../Lexer.ts";
+import { LexerActionExecutor } from "./LexerActionExecutor.ts";
+import { LexerNoViableAltException } from "../LexerNoViableAltException.ts";
+import { NotNull, Override } from "../Decorators.ts";
+import { OrderedATNConfigSet } from "./OrderedATNConfigSet.ts";
+import { PredictionContext } from "./PredictionContext.ts";
+import { PredicateTransition } from "./PredicateTransition.ts";
+import { RuleStopState } from "./RuleStopState.ts";
+import { RuleTransition } from "./RuleTransition.ts";
+import { Token } from "../Token.ts";
+import { Transition } from "./Transition.ts";
+import { TransitionType } from "./TransitionType.ts";
+import * as assert from "https://deno.land/std@0.85.0/node/assert.ts";
 
 /** "dup" of ParserInterpreter */
 export class LexerATNSimulator extends ATNSimulator {
@@ -304,7 +304,7 @@ export class LexerATNSimulator extends ATNSimulator {
 						lexerActionExecutor = lexerActionExecutor.fixOffsetBeforeMatch(input.index - this.startIndex);
 						config = c.transform(target, true, lexerActionExecutor);
 					} else {
-						assert(c.lexerActionExecutor == null);
+						
 						config = c.transform(target, true);
 					}
 
@@ -644,7 +644,7 @@ export class LexerATNSimulator extends ATNSimulator {
 		/* the lexer evaluates predicates on-the-fly; by this point configs
 		 * should not contain any configurations with unevaluated predicates.
 		 */
-		assert(!configs.hasSemanticContext);
+		
 
 		let proposed: DFAState = new DFAState(configs);
 		let existing: DFAState | undefined = this.atn.modeToDFA[this.mode].states.get(proposed);

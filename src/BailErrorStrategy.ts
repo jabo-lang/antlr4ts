@@ -5,14 +5,14 @@
 
 // ConvertTo-TS run at 2016-10-04T11:26:49.2855056-07:00
 
-import { DefaultErrorStrategy } from "./DefaultErrorStrategy";
-import { Parser } from "./Parser";
-import { InputMismatchException } from "./InputMismatchException";
-import { Override } from "./Decorators";
-import { ParseCancellationException } from "./misc/ParseCancellationException";
-import { ParserRuleContext } from "./ParserRuleContext";
-import { RecognitionException } from "./RecognitionException";
-import { Token } from "./Token";
+import { DefaultErrorStrategy } from "./DefaultErrorStrategy.ts";
+import { Parser } from "./Parser.ts";
+import { InputMismatchException } from "./InputMismatchException.ts";
+import { Override } from "./Decorators.ts";
+import { ParseCancellationException } from "./misc/ParseCancellationException.ts";
+import { ParserRuleContext } from "./ParserRuleContext.ts";
+import { RecognitionException } from "./RecognitionException.ts";
+import { Token } from "./Token.ts";
 
 /**
  * This implementation of {@link ANTLRErrorStrategy} responds to syntax errors

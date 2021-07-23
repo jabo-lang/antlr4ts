@@ -4,10 +4,10 @@
  */
 
 // CONVERSTION complete, Burt Harris 10/14/2016
-import { Override } from "../../Decorators";
-import { ParseTree } from "../ParseTree";
-import { Trees } from "../Trees";
-import { XPathElement } from "./XPathElement";
+import { Override } from "../../Decorators.ts";
+import { ParseTree } from "../ParseTree.ts";
+import { Trees } from "../Trees.ts";
+import { XPathElement } from "./XPathElement.ts";
 
 export class XPathTokenAnywhereElement extends XPathElement {
 	protected tokenType: number;

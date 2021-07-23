@@ -5,11 +5,11 @@
 
 // ConvertTo-TS run at 2016-10-04T11:26:27.3184311-07:00
 
-import { ATN } from "./ATN";
-import { ATNConfigSet } from "./ATNConfigSet";
-import { DFAState } from "../dfa/DFAState";
-import { NotNull } from "../Decorators";
-import { PredictionContext } from "./PredictionContext";
+import { ATN } from "./ATN.ts";
+import { ATNConfigSet } from "./ATNConfigSet.ts";
+import { DFAState } from "../dfa/DFAState.ts";
+import { NotNull } from "../Decorators.ts";
+import { PredictionContext } from "./PredictionContext.ts";
 
 export abstract class ATNSimulator {
 	/** Must distinguish between missing edge and edge we know leads nowhere */

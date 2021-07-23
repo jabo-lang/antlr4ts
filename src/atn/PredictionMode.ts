@@ -5,18 +5,18 @@
 
 // ConvertTo-TS run at 2016-10-04T11:26:36.2673893-07:00
 
-import { Array2DHashMap } from "../misc/Array2DHashMap";
-import { ATN } from "./ATN";
-import { ATNConfig } from "./ATNConfig";
-import { ATNConfigSet } from "./ATNConfigSet";
-import { ATNState } from "./ATNState";
-import { BitSet } from "../misc/BitSet";
-import { EqualityComparator } from "../misc/EqualityComparator";
-import { MurmurHash } from "../misc/MurmurHash";
-import { ObjectEqualityComparator } from "../misc/ObjectEqualityComparator";
-import { Override } from "../Decorators";
-import { RuleStopState } from "./RuleStopState";
-import { SemanticContext } from "./SemanticContext";
+import { Array2DHashMap } from "../misc/Array2DHashMap.ts";
+import { ATN } from "./ATN.ts";
+import { ATNConfig } from "./ATNConfig.ts";
+import { ATNConfigSet } from "./ATNConfigSet.ts";
+import { ATNState } from "./ATNState.ts";
+import { BitSet } from "../misc/BitSet.ts";
+import { EqualityComparator } from "../misc/EqualityComparator.ts";
+import { MurmurHash } from "../misc/MurmurHash.ts";
+import { ObjectEqualityComparator } from "../misc/ObjectEqualityComparator.ts";
+import { Override } from "../Decorators.ts";
+import { RuleStopState } from "./RuleStopState.ts";
+import { SemanticContext } from "./SemanticContext.ts";
 
 /**
  * This enumeration defines the prediction modes available in ANTLR 4 along with

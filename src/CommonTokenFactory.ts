@@ -5,12 +5,12 @@
 
 // ConvertTo-TS run at 2016-10-04T11:26:50.3010112-07:00
 
-import { CharStream } from "./CharStream";
-import { CommonToken } from "./CommonToken";
-import { Interval } from "./misc/Interval";
-import { Override } from "./Decorators";
-import { TokenFactory } from "./TokenFactory";
-import { TokenSource } from "./TokenSource";
+import { CharStream } from "./CharStream.ts";
+import { CommonToken } from "./CommonToken.ts";
+import { Interval } from "./misc/Interval.ts";
+import { Override } from "./Decorators.ts";
+import { TokenFactory } from "./TokenFactory.ts";
+import { TokenSource } from "./TokenSource.ts";
 
 /**
  * This default implementation of {@link TokenFactory} creates

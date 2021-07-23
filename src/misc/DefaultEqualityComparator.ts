@@ -3,11 +3,11 @@
  * Licensed under the BSD-3-Clause license. See LICENSE file in the project root for license information.
  */
 
-import { EqualityComparator } from "./EqualityComparator";
-import { Override } from "../Decorators";
-import { Equatable } from "./Stubs";
-import { MurmurHash } from "./MurmurHash";
-import { ObjectEqualityComparator } from "./ObjectEqualityComparator";
+import { EqualityComparator } from "./EqualityComparator.ts";
+import { Override } from "../Decorators.ts";
+import { Equatable } from "./Stubs.ts";
+import { MurmurHash } from "./MurmurHash.ts";
+import { ObjectEqualityComparator } from "./ObjectEqualityComparator.ts";
 
 /**
  * This default implementation of {@link EqualityComparator} uses object equality

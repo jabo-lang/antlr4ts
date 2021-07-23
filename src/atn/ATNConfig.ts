@@ -5,20 +5,20 @@
 
 // ConvertTo-TS run at 2016-10-04T11:26:25.2796692-07:00
 
-import { Array2DHashMap } from "../misc/Array2DHashMap";
-import { ATNState } from "./ATNState";
-import { DecisionState } from "./DecisionState";
-import { Equatable } from "../misc/Stubs";
-import { LexerActionExecutor } from "./LexerActionExecutor";
-import { MurmurHash } from "../misc/MurmurHash";
-import { NotNull, Override } from "../Decorators";
-import { ObjectEqualityComparator } from "../misc/ObjectEqualityComparator";
-import { PredictionContext } from "./PredictionContext";
-import { PredictionContextCache } from "./PredictionContextCache";
-import { Recognizer } from "../Recognizer";
-import { SemanticContext } from "./SemanticContext";
+import { Array2DHashMap } from "../misc/Array2DHashMap.ts";
+import { ATNState } from "./ATNState.ts";
+import { DecisionState } from "./DecisionState.ts";
+import { Equatable } from "../misc/Stubs.ts";
+import { LexerActionExecutor } from "./LexerActionExecutor.ts";
+import { MurmurHash } from "../misc/MurmurHash.ts";
+import { NotNull, Override } from "../Decorators.ts";
+import { ObjectEqualityComparator } from "../misc/ObjectEqualityComparator.ts";
+import { PredictionContext } from "./PredictionContext.ts";
+import { PredictionContextCache } from "./PredictionContextCache.ts";
+import { Recognizer } from "../Recognizer.ts";
+import { SemanticContext } from "./SemanticContext.ts";
 
-import * as assert from "assert";
+import * as assert from "https://deno.land/std@0.85.0/node/assert.ts";
 
 /**
  * This field stores the bit mask for implementing the
@@ -82,7 +82,7 @@ export class ATNConfig implements Equatable {
 
 	constructor(@NotNull state: ATNState, altOrConfig: number | ATNConfig, @NotNull context: PredictionContext) {
 		if (typeof altOrConfig === "number") {
-			assert((altOrConfig & 0xFFFFFF) === altOrConfig);
+			
 			this._state = state;
 			this.altAndOuterContextDepth = altOrConfig;
 			this._context = context;
@@ -156,7 +156,7 @@ export class ATNConfig implements Equatable {
 	}
 
 	set outerContextDepth(outerContextDepth: number) {
-		assert(outerContextDepth >= 0);
+		
 		// saturate at 0x7F - everything but zero/positive is only used for debug information anyway
 		outerContextDepth = Math.min(outerContextDepth, 0x7F);
 		this.altAndOuterContextDepth = ((outerContextDepth << 24) | (this.altAndOuterContextDepth & ~0x7F000000) >>> 0);

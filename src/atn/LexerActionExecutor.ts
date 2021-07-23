@@ -5,13 +5,13 @@
 
 // ConvertTo-TS run at 2016-10-04T11:26:28.8810453-07:00
 
-import { ArrayEqualityComparator } from "../misc/ArrayEqualityComparator";
-import { CharStream } from "../CharStream";
-import { Lexer } from "../Lexer";
-import { LexerAction } from "./LexerAction";
-import { LexerIndexedCustomAction } from "./LexerIndexedCustomAction";
-import { MurmurHash } from "../misc/MurmurHash";
-import { NotNull, Override } from "../Decorators";
+import { ArrayEqualityComparator } from "../misc/ArrayEqualityComparator.ts";
+import { CharStream } from "../CharStream.ts";
+import { Lexer } from "../Lexer.ts";
+import { LexerAction } from "./LexerAction.ts";
+import { LexerIndexedCustomAction } from "./LexerIndexedCustomAction.ts";
+import { MurmurHash } from "../misc/MurmurHash.ts";
+import { NotNull, Override } from "../Decorators.ts";
 
 /**
  * Represents an executor for a sequence of lexer actions which traversed during

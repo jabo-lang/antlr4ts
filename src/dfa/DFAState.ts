@@ -5,17 +5,17 @@
 
 // ConvertTo-TS run at 2016-10-04T11:26:38.7771056-07:00
 
-import { AcceptStateInfo } from "./AcceptStateInfo";
-import { ATN } from "../atn/ATN";
-import { ATNConfigSet } from "../atn/ATNConfigSet";
-import { BitSet } from "../misc/BitSet";
-import { LexerActionExecutor } from "../atn/LexerActionExecutor";
-import { MurmurHash } from "../misc/MurmurHash";
-import { NotNull, Override } from "../Decorators";
-import { PredictionContext } from "../atn/PredictionContext";
-import { SemanticContext } from "../atn/SemanticContext";
+import { AcceptStateInfo } from "./AcceptStateInfo.ts";
+import { ATN } from "../atn/ATN.ts";
+import { ATNConfigSet } from "../atn/ATNConfigSet.ts";
+import { BitSet } from "../misc/BitSet.ts";
+import { LexerActionExecutor } from "../atn/LexerActionExecutor.ts";
+import { MurmurHash } from "../misc/MurmurHash.ts";
+import { NotNull, Override } from "../Decorators.ts";
+import { PredictionContext } from "../atn/PredictionContext.ts";
+import { SemanticContext } from "../atn/SemanticContext.ts";
 
-import * as assert from "assert";
+import * as assert from "https://deno.land/std@0.85.0/node/assert.ts";
 
 /** A DFA state represents a set of possible ATN configurations.
  *  As Aho, Sethi, Ullman p. 117 says "The DFA uses its state
@@ -90,12 +90,12 @@ export class DFAState {
 	}
 
 	public setContextSymbol(symbol: number): void {
-		assert(this.isContextSensitive);
+		
 		this.contextSymbols!.set(symbol);
 	}
 
 	public setContextSensitive(atn: ATN): void {
-		assert(!this.configs.isOutermostConfigSet);
+		
 		if (this.isContextSensitive) {
 			return;
 		}

@@ -5,25 +5,25 @@
 
 // ConvertTo-TS run at 2016-10-04T11:26:25.5488013-07:00
 
-import { Array2DHashMap } from "../misc/Array2DHashMap";
-import { Array2DHashSet } from "../misc/Array2DHashSet";
-import { ArrayEqualityComparator } from "../misc/ArrayEqualityComparator";
-import { ATN } from "./ATN";
-import { ATNConfig } from "./ATNConfig";
-import { ATNSimulator } from "./ATNSimulator";
-import { ATNState } from "./ATNState";
-import { BitSet } from "../misc/BitSet";
-import { ConflictInfo } from "./ConflictInfo";
-import { EqualityComparator } from "../misc/EqualityComparator";
-import { JavaSet } from "../misc/Stubs";
-import { NotNull, Override } from "../Decorators";
-import { ObjectEqualityComparator } from "../misc/ObjectEqualityComparator";
-import { PredictionContext } from "./PredictionContext";
-import { PredictionContextCache } from "./PredictionContextCache";
-import { SemanticContext } from "./SemanticContext";
+import { Array2DHashMap } from "../misc/Array2DHashMap.ts";
+import { Array2DHashSet } from "../misc/Array2DHashSet.ts";
+import { ArrayEqualityComparator } from "../misc/ArrayEqualityComparator.ts";
+import { ATN } from "./ATN.ts";
+import { ATNConfig } from "./ATNConfig.ts";
+import { ATNSimulator } from "./ATNSimulator.ts";
+import { ATNState } from "./ATNState.ts";
+import { BitSet } from "../misc/BitSet.ts";
+import { ConflictInfo } from "./ConflictInfo.ts";
+import { EqualityComparator } from "../misc/EqualityComparator.ts";
+import { JavaSet } from "../misc/Stubs.ts";
+import { NotNull, Override } from "../Decorators.ts";
+import { ObjectEqualityComparator } from "../misc/ObjectEqualityComparator.ts";
+import { PredictionContext } from "./PredictionContext.ts";
+import { PredictionContextCache } from "./PredictionContextCache.ts";
+import { SemanticContext } from "./SemanticContext.ts";
 
-import * as assert from "assert";
-import * as Utils from "../misc/Utils";
+import * as assert from "https://deno.land/std@0.85.0/node/assert.ts";
+import * as Utils from "../misc/Utils.ts";
 
 interface KeyType { state: number; alt: number; }
 
@@ -174,7 +174,7 @@ export class ATNConfigSet implements JavaSet<ATNConfig> {
 			throw new Error("IllegalStateException");
 		}
 
-		assert(!outermostConfigSet || !this._dipsIntoOuterContext);
+		
 		this.outermostConfigSet = outermostConfigSet;
 	}
 
@@ -264,7 +264,7 @@ export class ATNConfigSet implements JavaSet<ATNConfig> {
 			throw new Error("Covered by ensureWritable but duplicated here for strict null check limitation");
 		}
 
-		assert(!this.outermostConfigSet || !e.reachesIntoOuterContext);
+		
 
 		if (contextCache == null) {
 			contextCache = PredictionContextCache.UNCACHED;
@@ -329,7 +329,7 @@ export class ATNConfigSet implements JavaSet<ATNConfig> {
 	private updatePropertiesForMergedConfig(config: ATNConfig): void {
 		// merged configs can't change the alt or semantic context
 		this._dipsIntoOuterContext = this._dipsIntoOuterContext || config.reachesIntoOuterContext;
-		assert(!this.outermostConfigSet || !this._dipsIntoOuterContext);
+		
 	}
 
 	private updatePropertiesForAddedConfig(config: ATNConfig): void {
@@ -341,7 +341,7 @@ export class ATNConfigSet implements JavaSet<ATNConfig> {
 
 		this._hasSemanticContext = this._hasSemanticContext || !SemanticContext.NONE.equals(config.semanticContext);
 		this._dipsIntoOuterContext = this._dipsIntoOuterContext || config.reachesIntoOuterContext;
-		assert(!this.outermostConfigSet || !this._dipsIntoOuterContext);
+		
 	}
 
 	protected canMerge(left: ATNConfig, leftKey: { state: number, alt: number }, right: ATNConfig): boolean {

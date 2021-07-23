@@ -5,14 +5,14 @@
 
 // ConvertTo-TS run at 2016-10-04T11:26:48.1433686-07:00
 
-import { Interval } from "../misc/Interval";
-import { Override } from "../Decorators";
-import { Parser } from "../Parser";
-import { ParseTree } from "./ParseTree";
-import { ParseTreeVisitor } from "./ParseTreeVisitor";
-import { RuleContext } from "../RuleContext";
-import { RuleNode } from "./RuleNode";
-import { Token } from "../Token";
+import { Interval } from "../misc/Interval.ts";
+import { Override } from "../Decorators.ts";
+import { Parser } from "../Parser.ts";
+import { ParseTree } from "./ParseTree.ts";
+import { ParseTreeVisitor } from "./ParseTreeVisitor.ts";
+import { RuleContext } from "../RuleContext.ts";
+import { RuleNode } from "./RuleNode.ts";
+import { Token } from "../Token.ts";
 
 export class TerminalNode implements ParseTree {
 	public _symbol: Token;

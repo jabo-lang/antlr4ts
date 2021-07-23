@@ -3,13 +3,13 @@
  * Licensed under the BSD-3-Clause license. See LICENSE file in the project root for license information.
  */
 
-import * as Character from "../misc/Character";
-import { ATNState } from "./ATNState";
-import { AtomTransition } from "./AtomTransition";
-import { IntervalSet } from "../misc/IntervalSet";
-import { RangeTransition } from "./RangeTransition";
-import { SetTransition } from "./SetTransition";
-import { Transition } from "./Transition";
+import * as Character from "../misc/Character.ts";
+import { ATNState } from "./ATNState.ts";
+import { AtomTransition } from "./AtomTransition.ts";
+import { IntervalSet } from "../misc/IntervalSet.ts";
+import { RangeTransition } from "./RangeTransition.ts";
+import { SetTransition } from "./SetTransition.ts";
+import { Transition } from "./Transition.ts";
 
 /**
  * Utility functions to create {@link AtomTransition}, {@link RangeTransition},

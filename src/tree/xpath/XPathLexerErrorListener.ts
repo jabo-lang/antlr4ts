@@ -5,10 +5,10 @@
 
 // CONVERSTION complete, Burt Harris 10/14/2016
 
-import { ANTLRErrorListener } from "../../ANTLRErrorListener";
-import { Override } from "../../Decorators";
-import { Recognizer } from "../../Recognizer";
-import { RecognitionException } from "../../RecognitionException";
+import { ANTLRErrorListener } from "../../ANTLRErrorListener.ts";
+import { Override } from "../../Decorators.ts";
+import { Recognizer } from "../../Recognizer.ts";
+import { RecognitionException } from "../../RecognitionException.ts";
 
 export class XPathLexerErrorListener implements ANTLRErrorListener<number> {
 	@Override

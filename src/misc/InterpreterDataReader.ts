@@ -1,15 +1,16 @@
+import { Buffer } from "https://deno.land/std@0.85.0/node/buffer.ts";
 /*!
  * Copyright 2016 The ANTLR Project. All rights reserved.
  * Licensed under the BSD-3-Clause license. See LICENSE file in the project root for license information.
  */
 
-import * as fs from "fs";
-import * as util from "util";
+import * as fs from "https://deno.land/std@0.85.0/node/fs.ts";
+import * as util from "https://deno.land/std@0.85.0/node/util.ts";
 
-import { ATN } from "../atn/ATN";
-import { Vocabulary } from "../Vocabulary";
-import { VocabularyImpl } from "../VocabularyImpl";
-import { ATNDeserializer } from "../atn/ATNDeserializer";
+import { ATN } from "../atn/ATN.ts";
+import { Vocabulary } from "../Vocabulary.ts";
+import { VocabularyImpl } from "../VocabularyImpl.ts";
+import { ATNDeserializer } from "../atn/ATNDeserializer.ts";
 
 function splitToLines(buffer: Buffer): string[] {
 	let lines: string[] = [];

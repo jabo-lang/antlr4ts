@@ -9,9 +9,9 @@
 // as much of it may be supported natively by JavaScript. Or otherwise need
 // substantial rethink
 
-import { NotNull } from "../Decorators";
-import { Equatable } from "./Stubs";
-import { IntegerList } from "./IntegerList";
+import { NotNull } from "../Decorators.ts";
+import { Equatable } from "./Stubs.ts";
+import { IntegerList } from "./IntegerList.ts";
 
 export function escapeWhitespace(s: string, escapeSpaces: boolean): string {
 	return escapeSpaces ? s.replace(/ /, "\u00B7") : s

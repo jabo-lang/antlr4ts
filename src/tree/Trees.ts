@@ -5,21 +5,21 @@
 
 // ConvertTo-TS run at 2016-10-04T11:26:48.3187865-07:00
 
-import { Arrays } from "../misc/Arrays";
-import { ATN } from "../atn/ATN";
-import { CommonToken } from "../CommonToken";
-import { ErrorNode } from "./ErrorNode";
-import { Interval } from "../misc/Interval";
-import { NotNull } from "../Decorators";
-import { Parser } from "../Parser";
-import { ParserRuleContext } from "../ParserRuleContext";
-import { ParseTree } from "./ParseTree";
-import { RuleContext } from "../RuleContext";
-import { RuleNode } from "./RuleNode";
-import { TerminalNode } from "./TerminalNode";
-import { Token } from "../Token";
-import { Tree } from "./Tree";
-import * as Utils from "../misc/Utils";
+import { Arrays } from "../misc/Arrays.ts";
+import { ATN } from "../atn/ATN.ts";
+import { CommonToken } from "../CommonToken.ts";
+import { ErrorNode } from "./ErrorNode.ts";
+import { Interval } from "../misc/Interval.ts";
+import { NotNull } from "../Decorators.ts";
+import { Parser } from "../Parser.ts";
+import { ParserRuleContext } from "../ParserRuleContext.ts";
+import { ParseTree } from "./ParseTree.ts";
+import { RuleContext } from "../RuleContext.ts";
+import { RuleNode } from "./RuleNode.ts";
+import { TerminalNode } from "./TerminalNode.ts";
+import { Token } from "../Token.ts";
+import { Tree } from "./Tree.ts";
+import * as Utils from "../misc/Utils.ts";
 
 /** A set of utility routines useful for all kinds of ANTLR trees. */
 export class Trees {

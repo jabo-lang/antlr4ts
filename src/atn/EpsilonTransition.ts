@@ -5,10 +5,10 @@
 
 // ConvertTo-TS run at 2016-10-04T11:26:28.6283213-07:00
 
-import { ATNState } from "./ATNState";
-import { Override, NotNull } from "../Decorators";
-import { Transition } from "./Transition";
-import { TransitionType } from "./TransitionType";
+import { ATNState } from "./ATNState.ts";
+import { Override, NotNull } from "../Decorators.ts";
+import { Transition } from "./Transition.ts";
+import { TransitionType } from "./TransitionType.ts";
 
 export class EpsilonTransition extends Transition {
 

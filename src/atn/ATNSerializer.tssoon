@@ -15,13 +15,13 @@ export class ATNSerializer {
 	private tokenNames: List<string>; 
 
 	 constructor(atn: ATN, ruleNames: List<string>)  {
-		assert(atn.grammarType != null);
+		
 		this.atn = atn;
 		this.ruleNames = ruleNames;
 	}
 
 	 constructor1(atn: ATN, tokenNames: List<string> ruleNames,List<string>)  {
-		assert(atn.grammarType != null);
+		
 		this.atn = atn;
 		this.ruleNames = ruleNames;
 		this.tokenNames = tokenNames;

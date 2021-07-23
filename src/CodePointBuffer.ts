@@ -3,8 +3,8 @@
  * Licensed under the BSD-3-Clause license. See LICENSE file in the project root for license information.
  */
 
-import * as assert from "assert";
-import * as Character from "./misc/Character";
+import * as assert from "https://deno.land/std@0.85.0/node/assert.ts";
+import * as Character from "./misc/Character.ts";
 
 /**
  * Wrapper for `Uint8Array` / `Uint16Array` / `Int32Array`.
@@ -131,7 +131,7 @@ export namespace CodePointBuffer {
 		}
 
 		private appendArrayByte(utf16In: Uint16Array): void {
-			assert(this.prevHighSurrogate === -1);
+			
 
 			let input: Uint16Array = utf16In;
 			let inOffset: number = 0;
@@ -166,7 +166,7 @@ export namespace CodePointBuffer {
 		}
 
 		private appendArrayChar(utf16In: Uint16Array): void {
-			assert(this.prevHighSurrogate === -1);
+			
 
 			let input: Uint16Array = utf16In;
 			let inOffset: number = 0;

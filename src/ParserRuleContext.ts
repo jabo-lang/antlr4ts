@@ -4,16 +4,16 @@
  */
 
 // ConvertTo-TS run at 2016-10-04T11:26:56.6285494-07:00
-import { ErrorNode } from "./tree/ErrorNode";
-import { Interval } from "./misc/Interval";
-import { Override } from "./Decorators";
-import { Parser } from "./Parser";
-import { ParseTree } from "./tree/ParseTree";
-import { ParseTreeListener } from "./tree/ParseTreeListener";
-import { RecognitionException } from "./RecognitionException";
-import { RuleContext } from "./RuleContext";
-import { TerminalNode } from "./tree/TerminalNode";
-import { Token } from "./Token";
+import { ErrorNode } from "./tree/ErrorNode.ts";
+import { Interval } from "./misc/Interval.ts";
+import { Override } from "./Decorators.ts";
+import { Parser } from "./Parser.ts";
+import { ParseTree } from "./tree/ParseTree.ts";
+import { ParseTreeListener } from "./tree/ParseTreeListener.ts";
+import { RecognitionException } from "./RecognitionException.ts";
+import { RuleContext } from "./RuleContext.ts";
+import { TerminalNode } from "./tree/TerminalNode.ts";
+import { Token } from "./Token.ts";
 
 /** A rule invocation record for parsing.
  *

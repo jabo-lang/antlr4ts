@@ -4,11 +4,11 @@
  */
 
 // CONVERSTION complete, Burt Harris 10/14/2016
-import { Override } from "../../Decorators";
-import { ParseTree } from "../ParseTree";
-import { TerminalNode } from "../TerminalNode";
-import { Trees } from "../Trees";
-import { XPathElement } from "./XPathElement";
+import { Override } from "../../Decorators.ts";
+import { ParseTree } from "../ParseTree.ts";
+import { TerminalNode } from "../TerminalNode.ts";
+import { Trees } from "../Trees.ts";
+import { XPathElement } from "./XPathElement.ts";
 
 export class XPathTokenElement extends XPathElement {
 	protected tokenType: number;

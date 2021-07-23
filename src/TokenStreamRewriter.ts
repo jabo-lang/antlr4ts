@@ -5,12 +5,12 @@
 
 // ConvertTo-TS run at 2016-10-04T11:26:58.1768850-07:00
 
-import { Interval } from "./misc/Interval";
-import { Override } from "./Decorators";
-import { Token } from "./Token";
-import { TokenStream } from "./TokenStream";
+import { Interval } from "./misc/Interval.ts";
+import { Override } from "./Decorators.ts";
+import { Token } from "./Token.ts";
+import { TokenStream } from "./TokenStream.ts";
 
-import * as Utils from "./misc/Utils";
+import * as Utils from "./misc/Utils.ts";
 
 /**
  * Useful for rewriting out a buffered input token stream after doing some

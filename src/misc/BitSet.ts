@@ -3,9 +3,9 @@
  * Licensed under the BSD-3-Clause license. See LICENSE file in the project root for license information.
  */
 
-import * as assert from "assert";
-import * as util from "util";
-import { MurmurHash } from "./MurmurHash";
+import * as assert from "https://deno.land/std@0.85.0/node/assert.ts";
+import * as util from "https://deno.land/std@0.85.0/node/util.ts";
+import { MurmurHash } from "./MurmurHash.ts";
 
 /**
  * Private empty array used to construct empty BitSets

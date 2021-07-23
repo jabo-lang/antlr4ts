@@ -4,21 +4,21 @@
  */
 
 // ConvertTo-TS run at 2016-10-04T11:26:57.1954441-07:00
-import { ANTLRErrorListener } from "./ANTLRErrorListener";
-import { ATN } from "./atn/ATN";
-import { ATNSimulator } from "./atn/ATNSimulator";
-import { ConsoleErrorListener } from "./ConsoleErrorListener";
-import { IntStream } from "./IntStream";
-import { ParseInfo } from "./atn/ParseInfo";
-import { ProxyErrorListener } from "./ProxyErrorListener";
-import { RecognitionException } from "./RecognitionException";
-import { RuleContext } from "./RuleContext";
-import { SuppressWarnings, NotNull } from "./Decorators";
-import { Token } from "./Token";
-import { Vocabulary } from "./Vocabulary";
-import { VocabularyImpl } from "./VocabularyImpl";
+import { ANTLRErrorListener } from "./ANTLRErrorListener.ts";
+import { ATN } from "./atn/ATN.ts";
+import { ATNSimulator } from "./atn/ATNSimulator.ts";
+import { ConsoleErrorListener } from "./ConsoleErrorListener.ts";
+import { IntStream } from "./IntStream.ts";
+// import { ParseInfo } from "./atn/ParseInfo.ts";
+import { ProxyErrorListener } from "./ProxyErrorListener.ts";
+import { RecognitionException } from "./RecognitionException.ts";
+import { RuleContext } from "./RuleContext.ts";
+import { SuppressWarnings, NotNull } from "./Decorators.ts";
+import { Token } from "./Token.ts";
+import { Vocabulary } from "./Vocabulary.ts";
+import { VocabularyImpl } from "./VocabularyImpl.ts";
 
-import * as Utils from "./misc/Utils";
+import * as Utils from "./misc/Utils.ts";
 
 export abstract class Recognizer<TSymbol, ATNInterpreter extends ATNSimulator> {
 	public static readonly EOF: number = -1;
@@ -158,9 +158,11 @@ export abstract class Recognizer<TSymbol, ATNInterpreter extends ATNSimulator> {
 	 *
 	 * @since 4.3
 	 */
+	/*
 	get parseInfo(): Promise<ParseInfo | undefined> {
 		return Promise.resolve(undefined);
 	}
+	*/
 
 	/** What is the error header, normally line/character position information? */
 	@NotNull

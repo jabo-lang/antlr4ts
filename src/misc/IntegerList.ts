@@ -5,9 +5,9 @@
 
 // ConvertTo-TS run at 2016-10-04T11:26:40.5099429-07:00
 
-import { Arrays } from "./Arrays";
-import { NotNull, Override } from "../Decorators";
-import { JavaCollection } from "./Stubs";
+import { Arrays } from "./Arrays.ts";
+import { NotNull, Override } from "../Decorators.ts";
+import { JavaCollection } from "./Stubs.ts";
 
 const EMPTY_DATA: Int32Array = new Int32Array(0);
 

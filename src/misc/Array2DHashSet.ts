@@ -5,13 +5,13 @@
 
 // ConvertTo-TS run at 2016-10-03T02:09:41.7434086-07:00
 
-import * as assert from "assert";
-import { DefaultEqualityComparator } from "./DefaultEqualityComparator";
-import { EqualityComparator } from "./EqualityComparator";
-import { NotNull, Nullable, Override, SuppressWarnings } from "../Decorators";
-import { JavaCollection, JavaSet } from "./Stubs";
-import { ObjectEqualityComparator } from "./ObjectEqualityComparator";
-import { MurmurHash } from "./MurmurHash";
+import * as assert from "https://deno.land/std@0.85.0/node/assert.ts";
+import { DefaultEqualityComparator } from "./DefaultEqualityComparator.ts";
+import { EqualityComparator } from "./EqualityComparator.ts";
+import { NotNull, Nullable, Override, SuppressWarnings } from "../Decorators.ts";
+import { JavaCollection, JavaSet } from "./Stubs.ts";
+import { ObjectEqualityComparator } from "./ObjectEqualityComparator.ts";
+import { MurmurHash } from "./MurmurHash.ts";
 
 /** {@link Set} implementation with closed hashing (open addressing). */
 
@@ -180,7 +180,7 @@ export class Array2DHashSet<T extends { toString(): string; }> implements JavaSe
 			}
 		}
 
-		assert(this.n === oldSize);
+		
 	}
 
 	@Override

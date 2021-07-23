@@ -5,26 +5,26 @@
 
 // ConvertTo-TS run at 2016-10-04T11:26:25.1063510-07:00
 
-import { Array2DHashMap } from "../misc/Array2DHashMap";
-import { ATNState } from "./ATNState";
-import { ATNType } from "./ATNType";
-import { DecisionState } from "./DecisionState";
-import { DFA } from "../dfa/DFA";
-import { IntervalSet } from "../misc/IntervalSet";
-import { InvalidState } from "./InvalidState";
-import { LexerAction } from "./LexerAction";
-import { LL1Analyzer } from "./LL1Analyzer";
-import { NotNull } from "../Decorators";
-import { ObjectEqualityComparator } from "../misc/ObjectEqualityComparator";
-import { PredictionContext } from "./PredictionContext";
-import { RuleContext } from "../RuleContext";
-import { RuleStartState } from "./RuleStartState";
-import { RuleStopState } from "./RuleStopState";
-import { RuleTransition } from "./RuleTransition";
-import { Token } from "../Token";
-import { TokensStartState } from "./TokensStartState";
+import { Array2DHashMap } from "../misc/Array2DHashMap.ts";
+import { ATNState } from "./ATNState.ts";
+import { ATNType } from "./ATNType.ts";
+import { DecisionState } from "./DecisionState.ts";
+import { DFA } from "../dfa/DFA.ts";
+import { IntervalSet } from "../misc/IntervalSet.ts";
+import { InvalidState } from "./InvalidState.ts";
+import { LexerAction } from "./LexerAction.ts";
+import { LL1Analyzer } from "./LL1Analyzer.ts";
+import { NotNull } from "../Decorators.ts";
+import { ObjectEqualityComparator } from "../misc/ObjectEqualityComparator.ts";
+import { PredictionContext } from "./PredictionContext.ts";
+import { RuleContext } from "../RuleContext.ts";
+import { RuleStartState } from "./RuleStartState.ts";
+import { RuleStopState } from "./RuleStopState.ts";
+import { RuleTransition } from "./RuleTransition.ts";
+import { Token } from "../Token.ts";
+import { TokensStartState } from "./TokensStartState.ts";
 
-import * as assert from "assert";
+import * as assert from "https://deno.land/std@0.85.0/node/assert.ts";
 
 /** */
 export class ATN {
@@ -120,7 +120,7 @@ export class ATN {
 	}
 
 	public getDecisionToDFA(): DFA[] {
-		assert(this.decisionToDFA != null && this.decisionToDFA.length === this.decisionToState.length);
+		
 		return this.decisionToDFA;
 	}
 

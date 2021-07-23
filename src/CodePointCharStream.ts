@@ -3,12 +3,12 @@
  * Licensed under the BSD-3-Clause license. See LICENSE file in the project root for license information.
  */
 
-import * as assert from "assert";
-import { CharStream } from "./CharStream";
-import { CodePointBuffer } from "./CodePointBuffer";
-import { IntStream } from "./IntStream";
-import { Interval } from "./misc/Interval";
-import { Override } from "./Decorators";
+import * as assert from "https://deno.land/std@0.85.0/node/assert.ts";
+import { CharStream } from "./CharStream.ts";
+import { CodePointBuffer } from "./CodePointBuffer.ts";
+import { IntStream } from "./IntStream.ts";
+import { Interval } from "./misc/Interval.ts";
+import { Override } from "./Decorators.ts";
 
 /**
  * Alternative to {@link ANTLRInputStream} which treats the input
@@ -29,7 +29,7 @@ export class CodePointCharStream implements CharStream {
 	// construct instances of this type.
 	protected constructor(array: Uint8Array | Uint16Array | Int32Array, position: number, remaining: number, name: string) {
 		// TODO
-		assert(position === 0);
+		
 		this._array = array;
 		this._size = remaining;
 		this._name = name;
@@ -76,7 +76,7 @@ export class CodePointCharStream implements CharStream {
 	@Override
 	public consume(): void {
 		if (this._size - this._position === 0) {
-			assert(this.LA(1) === IntStream.EOF);
+			
 			throw new RangeError("cannot consume EOF");
 		}
 

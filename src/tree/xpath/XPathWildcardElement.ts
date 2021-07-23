@@ -4,12 +4,12 @@
  */
 
 // CONVERSTION complete, Burt Harris 10/14/2016
-import { Override } from "../../Decorators";
-import { ParseTree } from "../ParseTree";
-import { TerminalNode } from "../TerminalNode";
-import { Trees } from "../Trees";
-import { XPath } from "./XPath";
-import { XPathElement } from "./XPathElement";
+import { Override } from "../../Decorators.ts";
+import { ParseTree } from "../ParseTree.ts";
+import { TerminalNode } from "../TerminalNode.ts";
+import { Trees } from "../Trees.ts";
+import { XPath } from "./XPath.ts";
+import { XPathElement } from "./XPathElement.ts";
 
 export class XPathWildcardElement extends XPathElement {
 	constructor() {

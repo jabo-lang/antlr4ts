@@ -5,12 +5,12 @@
 
 // ConvertTo-TS run at 2016-10-04T11:26:35.6390614-07:00
 
-import { Array2DHashMap } from "../misc/Array2DHashMap";
-import { Override } from "../Decorators";
-import { JavaMap } from "../misc/Stubs";
-import { ObjectEqualityComparator } from "../misc/ObjectEqualityComparator";
-import { PredictionContext } from "./PredictionContext";
-import * as assert from "assert";
+import { Array2DHashMap } from "../misc/Array2DHashMap.ts";
+import { Override } from "../Decorators.ts";
+import { JavaMap } from "../misc/Stubs.ts";
+import { ObjectEqualityComparator } from "../misc/ObjectEqualityComparator.ts";
+import { PredictionContext } from "./PredictionContext.ts";
+import * as assert from "https://deno.land/std@0.85.0/node/assert.ts";
 
 /** Used to cache {@link PredictionContext} objects. Its used for the shared
  *  context cash associated with contexts in DFA states. This cache
@@ -119,8 +119,8 @@ export namespace PredictionContextCache {
 		private _y: PredictionContext;
 
 		constructor(x: PredictionContext, y: PredictionContext) {
-			assert(x != null);
-			assert(y != null);
+			
+			
 			this._x = x;
 			this._y = y;
 		}

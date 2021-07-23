@@ -5,16 +5,16 @@
 
 // ConvertTo-TS run at 2016-10-04T11:26:57.3490837-07:00
 
-import { ATN } from "./atn/ATN";
-import { Parser } from "./Parser";
-import { Recognizer } from "./Recognizer";
-import { RuleNode } from "./tree/RuleNode";
-import { ParseTree } from "./tree/ParseTree";
-import { Interval } from "./misc/Interval";
-import { Override } from "./Decorators";
-import { Trees } from "./tree/Trees";
-import { ParseTreeVisitor } from "./tree/ParseTreeVisitor";
-import { ParserRuleContext } from "./ParserRuleContext";
+import { ATN } from "./atn/ATN.ts";
+import { Parser } from "./Parser.ts";
+import { Recognizer } from "./Recognizer.ts";
+import { RuleNode } from "./tree/RuleNode.ts";
+import { ParseTree } from "./tree/ParseTree.ts";
+import { Interval } from "./misc/Interval.ts";
+import { Override } from "./Decorators.ts";
+import { Trees } from "./tree/Trees.ts";
+import { ParseTreeVisitor } from "./tree/ParseTreeVisitor.ts";
+import { ParserRuleContext } from "./ParserRuleContext.ts";
 
 /** A rule context is a record of a single rule invocation.
  *

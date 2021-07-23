@@ -5,16 +5,16 @@
 
 // ConvertTo-TS run at 2016-10-04T11:26:49.6074365-07:00
 
-import * as assert from "assert";
-import { CommonToken } from "./CommonToken";
-import { Interval } from "./misc/Interval";
-import { Lexer } from "./Lexer";
-import { NotNull, Override } from "./Decorators";
-import { RuleContext } from "./RuleContext";
-import { Token } from "./Token";
-import { TokenSource } from "./TokenSource";
-import { TokenStream } from "./TokenStream";
-import { WritableToken } from "./WritableToken";
+import * as assert from "https://deno.land/std@0.85.0/node/assert.ts";
+import { CommonToken } from "./CommonToken.ts";
+import { Interval } from "./misc/Interval.ts";
+import { Lexer } from "./Lexer.ts";
+import { NotNull, Override } from "./Decorators.ts";
+import { RuleContext } from "./RuleContext.ts";
+import { Token } from "./Token.ts";
+import { TokenSource } from "./TokenSource.ts";
+import { TokenStream } from "./TokenStream.ts";
+import { WritableToken } from "./WritableToken.ts";
 
 /**
  * This implementation of {@link TokenStream} loads tokens from a
@@ -147,7 +147,7 @@ export class BufferedTokenStream implements TokenStream {
 	 * @see #get(int i)
 	 */
 	protected sync(i: number): boolean {
-		assert(i >= 0);
+		
 		let n: number = i - this.tokens.length + 1; // how many more elements we need?
 		//System.out.println("sync("+i+") needs "+n);
 		if (n > 0) {
@@ -311,7 +311,7 @@ export class BufferedTokenStream implements TokenStream {
 		this.lazyInit();
 
 		if (start === undefined) {
-			assert(stop === undefined && types === undefined);
+			
 			return this.tokens;
 		} else if (stop === undefined) {
 			stop = this.tokens.length - 1;

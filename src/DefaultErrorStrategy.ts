@@ -5,26 +5,26 @@
 
 // ConvertTo-TS run at 2016-10-04T11:26:50.8290527-07:00
 
-import { ANTLRErrorStrategy } from "./ANTLRErrorStrategy";
-import { ATN } from "./atn/ATN";
-import { ATNState } from "./atn/ATNState";
-import { ATNStateType } from "./atn/ATNStateType";
-import { FailedPredicateException } from "./FailedPredicateException";
-import { InputMismatchException } from "./InputMismatchException";
-import { IntervalSet } from "./misc/IntervalSet";
-import { NoViableAltException } from "./NoViableAltException";
-import { Parser } from "./Parser";
-import { ParserRuleContext } from "./ParserRuleContext";
-import { PredictionContext } from "./atn/PredictionContext";
-import { RecognitionException } from "./RecognitionException";
-import { RuleContext } from "./RuleContext";
-import { RuleTransition } from "./atn/RuleTransition";
-import { TokenStream } from "./TokenStream";
-import { Token } from "./Token";
-import { TokenFactory } from "./TokenFactory";
-import { TokenSource } from "./TokenSource";
-import { Vocabulary } from "./Vocabulary";
-import { Override, NotNull } from "./Decorators";
+import { ANTLRErrorStrategy } from "./ANTLRErrorStrategy.ts";
+import { ATN } from "./atn/ATN.ts";
+import { ATNState } from "./atn/ATNState.ts";
+import { ATNStateType } from "./atn/ATNStateType.ts";
+import { FailedPredicateException } from "./FailedPredicateException.ts";
+import { InputMismatchException } from "./InputMismatchException.ts";
+import { IntervalSet } from "./misc/IntervalSet.ts";
+import { NoViableAltException } from "./NoViableAltException.ts";
+import { Parser } from "./Parser.ts";
+import { ParserRuleContext } from "./ParserRuleContext.ts";
+import { PredictionContext } from "./atn/PredictionContext.ts";
+import { RecognitionException } from "./RecognitionException.ts";
+import { RuleContext } from "./RuleContext.ts";
+import { RuleTransition } from "./atn/RuleTransition.ts";
+import { TokenStream } from "./TokenStream.ts";
+import { Token } from "./Token.ts";
+import { TokenFactory } from "./TokenFactory.ts";
+import { TokenSource } from "./TokenSource.ts";
+import { Vocabulary } from "./Vocabulary.ts";
+import { Override, NotNull } from "./Decorators.ts";
 
 /**
  * This is the default implementation of {@link ANTLRErrorStrategy} used for

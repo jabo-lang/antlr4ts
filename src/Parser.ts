@@ -5,40 +5,40 @@
 
 // ConvertTo-TS run at 2016-10-04T11:26:52.4399193-07:00
 
-import * as assert from "assert";
-import * as Utils from "./misc/Utils";
+import * as assert from "https://deno.land/std@0.85.0/node/assert.ts";
+import * as Utils from "./misc/Utils.ts";
 
-import { ANTLRErrorListener } from "./ANTLRErrorListener";
-import { ANTLRErrorStrategy } from "./ANTLRErrorStrategy";
-import { ATN } from "./atn/ATN";
-import { ATNDeserializationOptions } from "./atn/ATNDeserializationOptions";
-import { ATNDeserializer } from "./atn/ATNDeserializer";
-import { ATNSimulator } from "./atn/ATNSimulator";
-import { ATNState } from "./atn/ATNState";
-import { DefaultErrorStrategy } from "./DefaultErrorStrategy";
-import { DFA } from "./dfa/DFA";
-import { ErrorNode } from "./tree/ErrorNode";
-import { IntegerStack } from "./misc/IntegerStack";
-import { IntervalSet } from "./misc/IntervalSet";
-import { IntStream } from "./IntStream";
-import { Lexer } from "./Lexer";
-import { Override, NotNull, Nullable } from "./Decorators";
-import { ParseInfo } from "./atn/ParseInfo";
-import { ParserATNSimulator } from "./atn/ParserATNSimulator";
-import { ParserErrorListener } from "./ParserErrorListener";
-import { ParserRuleContext } from "./ParserRuleContext";
-import { ParseTreeListener } from "./tree/ParseTreeListener";
-import { ParseTreePattern } from "./tree/pattern/ParseTreePattern";
-import { ProxyParserErrorListener } from "./ProxyParserErrorListener";
-import { RecognitionException } from "./RecognitionException";
-import { Recognizer } from "./Recognizer";
-import { RuleContext } from "./RuleContext";
-import { RuleTransition } from "./atn/RuleTransition";
-import { TerminalNode } from "./tree/TerminalNode";
-import { Token } from "./Token";
-import { TokenFactory } from "./TokenFactory";
-import { TokenSource } from "./TokenSource";
-import { TokenStream } from "./TokenStream";
+import { ANTLRErrorListener } from "./ANTLRErrorListener.ts";
+import { ANTLRErrorStrategy } from "./ANTLRErrorStrategy.ts";
+import { ATN } from "./atn/ATN.ts";
+import { ATNDeserializationOptions } from "./atn/ATNDeserializationOptions.ts";
+import { ATNDeserializer } from "./atn/ATNDeserializer.ts";
+import { ATNSimulator } from "./atn/ATNSimulator.ts";
+import { ATNState } from "./atn/ATNState.ts";
+import { DefaultErrorStrategy } from "./DefaultErrorStrategy.ts";
+import { DFA } from "./dfa/DFA.ts";
+import { ErrorNode } from "./tree/ErrorNode.ts";
+import { IntegerStack } from "./misc/IntegerStack.ts";
+import { IntervalSet } from "./misc/IntervalSet.ts";
+import { IntStream } from "./IntStream.ts";
+import { Lexer } from "./Lexer.ts";
+import { Override, NotNull, Nullable } from "./Decorators.ts";
+// import { ParseInfo } from "./atn/ParseInfo.ts";
+import { ParserATNSimulator } from "./atn/ParserATNSimulator.ts";
+import { ParserErrorListener } from "./ParserErrorListener.ts";
+import { ParserRuleContext } from "./ParserRuleContext.ts";
+import { ParseTreeListener } from "./tree/ParseTreeListener.ts";
+import { ParseTreePattern } from "./tree/pattern/ParseTreePattern.ts";
+import { ProxyParserErrorListener } from "./ProxyParserErrorListener.ts";
+import { RecognitionException } from "./RecognitionException.ts";
+import { Recognizer } from "./Recognizer.ts";
+import { RuleContext } from "./RuleContext.ts";
+import { RuleTransition } from "./atn/RuleTransition.ts";
+import { TerminalNode } from "./tree/TerminalNode.ts";
+import { Token } from "./Token.ts";
+import { TokenFactory } from "./TokenFactory.ts";
+import { TokenSource } from "./TokenSource.ts";
+import { TokenStream } from "./TokenStream.ts";
 
 class TraceListener implements ParseTreeListener {
 	constructor(private ruleNames: string[], private tokenStream: TokenStream) {
@@ -446,7 +446,7 @@ export abstract class Parser extends Recognizer<Token, ParserATNSimulator> {
 		}
 
 		let currentLexer = lexer;
-		let m = await import("./tree/pattern/ParseTreePatternMatcher");
+		let m = await import("./tree/pattern/ParseTreePatternMatcher.ts");
 		let matcher = new m.ParseTreePatternMatcher(currentLexer, this);
 		return matcher.compile(pattern, patternRuleIndex);
 	}
@@ -863,7 +863,8 @@ export abstract class Parser extends Recognizer<Token, ParserATNSimulator> {
 					console.log();
 				}
 				console.log("Decision " + dfa.decision + ":");
-				process.stdout.write(dfa.toString(this.vocabulary, this.ruleNames));
+				const text = dfa.toString(this.vocabulary, this.ruleNames);
+				Deno.writeAll(Deno.stdout, new TextEncoder().encode(text))
 				seenOne = true;
 			}
 		}
@@ -873,9 +874,10 @@ export abstract class Parser extends Recognizer<Token, ParserATNSimulator> {
 		return this._input.sourceName;
 	}
 
+	/*
 	@Override
 	get parseInfo(): Promise<ParseInfo | undefined> {
-		return import("./atn/ProfilingATNSimulator").then((m) => {
+		return import("./atn/ProfilingATNSimulator.ts").then((m) => {
 			let interp: ParserATNSimulator = this.interpreter;
 			if (interp instanceof m.ProfilingATNSimulator) {
 				return new ParseInfo(interp);
@@ -884,12 +886,13 @@ export abstract class Parser extends Recognizer<Token, ParserATNSimulator> {
 			return undefined;
 		});
 	}
+	*/
 
 	/**
 	 * @since 4.3
 	 */
 	public async setProfile(profile: boolean): Promise<void> {
-		let m = await import("./atn/ProfilingATNSimulator");
+		let m = await import("./atn/ProfilingATNSimulator.ts");
 		let interp: ParserATNSimulator = this.interpreter;
 		if (profile) {
 			if (!(interp instanceof m.ProfilingATNSimulator)) {

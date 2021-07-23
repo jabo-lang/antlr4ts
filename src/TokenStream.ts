@@ -5,11 +5,11 @@
 
 // ConvertTo-TS run at 2016-10-04T11:26:58.0433998-07:00
 
-import { Interval } from "./misc/Interval";
-import { IntStream } from "./IntStream";
-import { RuleContext } from "./RuleContext";
-import { Token } from "./Token";
-import { TokenSource } from "./TokenSource";
+import { Interval } from "./misc/Interval.ts";
+import { IntStream } from "./IntStream.ts";
+import { RuleContext } from "./RuleContext.ts";
+import { Token } from "./Token.ts";
+import { TokenSource } from "./TokenSource.ts";
 
 /**
  * An {@link IntStream} whose symbols are {@link Token} instances.

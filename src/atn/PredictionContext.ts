@@ -6,21 +6,21 @@
 // ConvertTo-TS run at 2016-10-04T11:26:35.3812636-07:00
 
 
-import { Array2DHashMap } from "../misc/Array2DHashMap";
-import { Array2DHashSet } from "../misc/Array2DHashSet";
-import { Arrays } from "../misc/Arrays";
-import { ATN } from "./ATN";
-import { ATNState } from "./ATNState";
-import { EqualityComparator } from "../misc/EqualityComparator";
-import { MurmurHash } from "../misc/MurmurHash";
-import { NotNull, Override } from "../Decorators";
-import { Equatable, JavaSet } from "../misc/Stubs";
-import { PredictionContextCache } from "./PredictionContextCache";
-import { Recognizer } from "../Recognizer";
-import { RuleContext } from "../RuleContext";
-import { RuleTransition } from "./RuleTransition";
+import { Array2DHashMap } from "../misc/Array2DHashMap.ts";
+import { Array2DHashSet } from "../misc/Array2DHashSet.ts";
+import { Arrays } from "../misc/Arrays.ts";
+import { ATN } from "./ATN.ts";
+import { ATNState } from "./ATNState.ts";
+import { EqualityComparator } from "../misc/EqualityComparator.ts";
+import { MurmurHash } from "../misc/MurmurHash.ts";
+import { NotNull, Override } from "../Decorators.ts";
+import { Equatable, JavaSet } from "../misc/Stubs.ts";
+import { PredictionContextCache } from "./PredictionContextCache.ts";
+import { Recognizer } from "../Recognizer.ts";
+import { RuleContext } from "../RuleContext.ts";
+import { RuleTransition } from "./RuleTransition.ts";
 
-import * as assert from "assert";
+import * as assert from "https://deno.land/std@0.85.0/node/assert.ts";
 
 const INITIAL_HASH: number = 1;
 
@@ -164,7 +164,7 @@ export abstract class PredictionContext implements Equatable {
 				canReturnRight = false;
 				leftIndex++;
 			} else {
-				assert(context1.getReturnState(rightIndex) < context0.getReturnState(leftIndex));
+				
 				parentsList[count] = context1.getParent(rightIndex);
 				returnStatesList[count] = context1.getReturnState(rightIndex);
 				canReturnLeft = false;
@@ -449,8 +449,8 @@ class ArrayPredictionContext extends PredictionContext {
 
 	constructor( @NotNull parents: PredictionContext[], returnStates: number[], hashCode?: number) {
 		super(hashCode || PredictionContext.calculateHashCode(parents, returnStates));
-		assert(parents.length === returnStates.length);
-		assert(returnStates.length > 1 || returnStates[0] !== PredictionContext.EMPTY_FULL_STATE_KEY, "Should be using PredictionContext.EMPTY instead.");
+		
+		
 
 		this.parents = parents;
 		this.returnStates = returnStates;
@@ -559,7 +559,7 @@ class ArrayPredictionContext extends PredictionContext {
 				if (updatedParents.length === 1) {
 					result = new SingletonPredictionContext(updatedParents[0], updatedReturnStates[0]);
 				} else {
-					assert(updatedParents.length > 1);
+					
 					result = new ArrayPredictionContext(updatedParents, updatedReturnStates);
 				}
 
@@ -652,20 +652,20 @@ export class SingletonPredictionContext extends PredictionContext {
 
 	constructor(@NotNull parent: PredictionContext, returnState: number) {
 		super(PredictionContext.calculateSingleHashCode(parent, returnState));
-		// assert(returnState != PredictionContext.EMPTY_FULL_STATE_KEY && returnState != PredictionContext.EMPTY_LOCAL_STATE_KEY);
+		// 
 		this.parent = parent;
 		this.returnState = returnState;
 	}
 
 	@Override
 	public getParent(index: number): PredictionContext {
-		// assert(index == 0);
+		// 
 		return this.parent;
 	}
 
 	@Override
 	public getReturnState(index: number): number {
-		// assert(index == 0);
+		// 
 		return this.returnState;
 	}
 

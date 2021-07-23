@@ -5,12 +5,12 @@
 
 // ConvertTo-TS run at 2016-10-04T11:26:28.3330673-07:00
 
-import { AmbiguityInfo } from "./AmbiguityInfo";
-import { ContextSensitivityInfo } from "./ContextSensitivityInfo";
-import { ErrorInfo } from "./ErrorInfo";
-import { LookaheadEventInfo } from "./LookaheadEventInfo";
-import { Override } from "../Decorators";
-import { PredicateEvalInfo } from "./PredicateEvalInfo";
+import { AmbiguityInfo } from "./AmbiguityInfo.ts";
+import { ContextSensitivityInfo } from "./ContextSensitivityInfo.ts";
+import { ErrorInfo } from "./ErrorInfo.ts";
+import { LookaheadEventInfo } from "./LookaheadEventInfo.ts";
+import { Override } from "../Decorators.ts";
+import { PredicateEvalInfo } from "./PredicateEvalInfo.ts";
 
 /**
  * This class contains profiling gathered for a particular decision.

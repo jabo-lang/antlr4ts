@@ -4,12 +4,12 @@
  */
 // ConvertTo-TS run at 2016-10-04T11:26:49.0828748-07:00
 
-import * as assert from "assert";
-import { CharStream } from "./CharStream";
-import { Arrays } from "./misc/Arrays";
-import { Override } from "./Decorators";
-import { IntStream } from "./IntStream";
-import { Interval } from "./misc/Interval";
+import * as assert from "https://deno.land/std@0.85.0/node/assert.ts";
+import { CharStream } from "./CharStream.ts";
+import { Arrays } from "./misc/Arrays.ts";
+import { Override } from "./Decorators.ts";
+import { IntStream } from "./IntStream.ts";
+import { Interval } from "./misc/Interval.ts";
 
 const READ_BUFFER_SIZE: number = 1024;
 const INITIAL_BUFFER_SIZE: number = 1024;
@@ -53,7 +53,7 @@ export class ANTLRInputStream implements CharStream {
 	@Override
 	public consume(): void {
 		if (this.p >= this.n) {
-			assert(this.LA(1) === IntStream.EOF);
+			
 			throw new Error("cannot consume EOF");
 		}
 

@@ -93,7 +93,7 @@ export class UnbufferedTokenStream implements TokenStream {
 		}
 
 		if ( index >= n ) {
-			assert(n > 0 && tokens[n-1].type == Token.EOF);
+			
 			return tokens[n-1];
 		}
 

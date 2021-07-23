@@ -3,8 +3,8 @@
  * Licensed under the BSD-3-Clause license. See LICENSE file in the project root for license information.
  */
 
-export * from "./AcceptStateInfo";
-export * from "./DFA";
-export * from "./DFASerializer";
-export * from "./DFAState";
-export * from "./LexerDFASerializer";
+export * from "./AcceptStateInfo.ts";
+export * from "./DFA.ts";
+export * from "./DFASerializer.ts";
+export * from "./DFAState.ts";
+export * from "./LexerDFASerializer.ts";

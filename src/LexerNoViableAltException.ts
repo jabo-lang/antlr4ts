@@ -5,13 +5,13 @@
 
 // ConvertTo-TS run at 2016-10-04T11:26:52.0961136-07:00
 
-import { ATNConfigSet } from "./atn/ATNConfigSet";
-import { RecognitionException } from "./RecognitionException";
-import { NotNull, Override } from "./Decorators";
-import { Lexer } from "./Lexer";
-import { CharStream } from "./CharStream";
-import { Interval } from "./misc/Interval";
-import * as Utils from "./misc/Utils";
+import { ATNConfigSet } from "./atn/ATNConfigSet.ts";
+import { RecognitionException } from "./RecognitionException.ts";
+import { NotNull, Override } from "./Decorators.ts";
+import { Lexer } from "./Lexer.ts";
+import { CharStream } from "./CharStream.ts";
+import { Interval } from "./misc/Interval.ts";
+import * as Utils from "./misc/Utils.ts";
 
 export class LexerNoViableAltException extends RecognitionException {
 	//private static serialVersionUID: number =  -730999203913001726L;

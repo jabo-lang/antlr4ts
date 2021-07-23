@@ -5,9 +5,9 @@
 
 // ConvertTo-TS run at 2016-10-04T11:26:57.9604200-07:00
 
-import { CharStream } from "./CharStream";
-import { Token } from "./Token";
-import { TokenFactory } from "./TokenFactory";
+import { CharStream } from "./CharStream.ts";
+import { Token } from "./Token.ts";
+import { TokenFactory } from "./TokenFactory.ts";
 
 /**
  * A source of tokens must provide a sequence of tokens via {@link #nextToken()}

@@ -5,29 +5,29 @@
 
 // CONVERSTION complete, Burt Harris 10/14/2016
 
-import { BailErrorStrategy } from "../../BailErrorStrategy";
-import { CharStreams } from "../../CharStreams";
-import { Chunk } from "./Chunk";
-import { CommonTokenStream } from "../../CommonTokenStream";
-import { Lexer } from "../../Lexer";
-import { ListTokenSource } from "../../ListTokenSource";
-import { MultiMap } from "../../misc/MultiMap";
-import { NotNull } from "../../Decorators";
-import { ParseCancellationException } from "../../misc/ParseCancellationException";
-import { Parser } from "../../Parser";
-import { ParserInterpreter } from "../../ParserInterpreter";
-import { ParserRuleContext } from "../../ParserRuleContext";
-import { ParseTree } from "../ParseTree";
-import { ParseTreeMatch } from "./ParseTreeMatch";
-import { ParseTreePattern } from "./ParseTreePattern";
-import { RecognitionException } from "../../RecognitionException";
-import { RuleNode } from "../RuleNode";
-import { RuleTagToken } from "./RuleTagToken";
-import { TagChunk } from "./TagChunk";
-import { TerminalNode } from "../TerminalNode";
-import { TextChunk } from "./TextChunk";
-import { Token } from "../../Token";
-import { TokenTagToken } from "./TokenTagToken";
+import { BailErrorStrategy } from "../../BailErrorStrategy.ts";
+import { CharStreams } from "../../CharStreams.ts";
+import { Chunk } from "./Chunk.ts";
+import { CommonTokenStream } from "../../CommonTokenStream.ts";
+import { Lexer } from "../../Lexer.ts";
+import { ListTokenSource } from "../../ListTokenSource.ts";
+import { MultiMap } from "../../misc/MultiMap.ts";
+import { NotNull } from "../../Decorators.ts";
+import { ParseCancellationException } from "../../misc/ParseCancellationException.ts";
+import { Parser } from "../../Parser.ts";
+import { ParserInterpreter } from "../../ParserInterpreter.ts";
+import { ParserRuleContext } from "../../ParserRuleContext.ts";
+import { ParseTree } from "../ParseTree.ts";
+import { ParseTreeMatch } from "./ParseTreeMatch.ts";
+import { ParseTreePattern } from "./ParseTreePattern.ts";
+import { RecognitionException } from "../../RecognitionException.ts";
+import { RuleNode } from "../RuleNode.ts";
+import { RuleTagToken } from "./RuleTagToken.ts";
+import { TagChunk } from "./TagChunk.ts";
+import { TerminalNode } from "../TerminalNode.ts";
+import { TextChunk } from "./TextChunk.ts";
+import { Token } from "../../Token.ts";
+import { TokenTagToken } from "./TokenTagToken.ts";
 
 /**
  * A tree pattern matching mechanism for ANTLR {@link ParseTree}s.
