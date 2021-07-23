@@ -9,7 +9,7 @@ import { ATN } from "./atn/ATN.ts";
 import { ATNSimulator } from "./atn/ATNSimulator.ts";
 import { ConsoleErrorListener } from "./ConsoleErrorListener.ts";
 import { IntStream } from "./IntStream.ts";
-import { ParseInfo } from "./atn/ParseInfo.ts";
+// import { ParseInfo } from "./atn/ParseInfo.ts";
 import { ProxyErrorListener } from "./ProxyErrorListener.ts";
 import { RecognitionException } from "./RecognitionException.ts";
 import { RuleContext } from "./RuleContext.ts";
@@ -158,9 +158,11 @@ export abstract class Recognizer<TSymbol, ATNInterpreter extends ATNSimulator> {
 	 *
 	 * @since 4.3
 	 */
+	/*
 	get parseInfo(): Promise<ParseInfo | undefined> {
 		return Promise.resolve(undefined);
 	}
+	*/
 
 	/** What is the error header, normally line/character position information? */
 	@NotNull

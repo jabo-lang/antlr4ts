@@ -23,7 +23,7 @@ import { IntervalSet } from "./misc/IntervalSet.ts";
 import { IntStream } from "./IntStream.ts";
 import { Lexer } from "./Lexer.ts";
 import { Override, NotNull, Nullable } from "./Decorators.ts";
-import { ParseInfo } from "./atn/ParseInfo.ts";
+// import { ParseInfo } from "./atn/ParseInfo.ts";
 import { ParserATNSimulator } from "./atn/ParserATNSimulator.ts";
 import { ParserErrorListener } from "./ParserErrorListener.ts";
 import { ParserRuleContext } from "./ParserRuleContext.ts";
@@ -863,7 +863,8 @@ export abstract class Parser extends Recognizer<Token, ParserATNSimulator> {
 					console.log();
 				}
 				console.log("Decision " + dfa.decision + ":");
-				process.stdout.write(dfa.toString(this.vocabulary, this.ruleNames));
+				const text = dfa.toString(this.vocabulary, this.ruleNames);
+				Deno.writeAll(Deno.stdout, new TextEncoder().encode(text))
 				seenOne = true;
 			}
 		}
@@ -873,6 +874,7 @@ export abstract class Parser extends Recognizer<Token, ParserATNSimulator> {
 		return this._input.sourceName;
 	}
 
+	/*
 	@Override
 	get parseInfo(): Promise<ParseInfo | undefined> {
 		return import("./atn/ProfilingATNSimulator.ts").then((m) => {
@@ -884,6 +886,7 @@ export abstract class Parser extends Recognizer<Token, ParserATNSimulator> {
 			return undefined;
 		});
 	}
+	*/
 
 	/**
 	 * @since 4.3
