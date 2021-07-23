@@ -1,6 +1,8 @@
 {
   "compilerOptions": {
-    "outDir": "target",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "outDir": "dist",
     "sourceMap": true,
     "inlineSources": true,
     "module": "commonjs",
@@ -25,6 +27,10 @@
     "node_modules",
     "target",
     "tool",
-    "test/runtime"
+    "test/runtime",
+    "dist/",
+    "deno_dist/",
+    "src/**/*.deno.ts",
+    "src/**/*.deno.tsx"
   ]
 }
